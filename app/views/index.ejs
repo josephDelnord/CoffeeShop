@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <%- include('partials/head') %>
+
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+
+<%- include('partials/header') %>
+
+  <body>
+
+    <main>
+      <!-- à propos -->
+      <section id="about">
+        <div>
+          <h1>Votre spécialiste Haucloquois du café</h1>
+          <p>
+            oCoffee est un détaillant de café et de produits associés à la
+            consommation du café basé dans la ville de Hauts-de-Cloques. Nous
+            importons nos produits directement des producteurs, et nous les
+            sélectionnons selon des critères exigeants de qualité. oCoffee est
+            reconnu à l’échelle départementale.
+          </p>
+          <a class="button" href="/catalog">Voir le catalogue</a>
+        </div>
+        <img src="/images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee" />
+      </section>
+
+      <!-- les derniers produits -->
+
+      <section id="latest-products">
+        <h2>Nouveautés</h2>
+
+        <ul>
+          <% newProducts.forEach(product => { %>
+          <li>
+            <article>
+              <img src="/images/coffees/<%= product.reference %>.png" alt="<%= product.name %>" />
+              <div>
+                <h3><%= product.name %></h3>
+                <a class="button-outline" href="/product/<%= product.id %>">Découvrir</a>
+              </div>
+            </article>
+          </li>
+          <% }) %>
+       
+        </ul>
+      </section>
+    </main>
+
+  </body>
+
+</html>
+
+<%-include('partials/footer') %>
+  </body>
+
+  </html>

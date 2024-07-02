@@ -1,0 +1,169 @@
+[
+  {
+    "name": "Espresso",
+    "description": "Café fort et concentré préparé en faisant passer de l'eau chaude à travers du café finement moulu.",
+    "origin": "Italie",
+    "price": 20.99,
+    "main_feature": "Corsé",
+    "created_at": "2023-09-26",
+    "available": true,
+    "image_url": "/images/coffees/100955890.png" 
+  },
+  {
+    "name": "Columbian",
+    "description": "Café moyennement corsé avec une acidité vive et une saveur riche.",
+    "origin": "Colombie",
+    "price": 18.75,
+    "main_feature": "Acide",
+    "created_at": "2024-09-26",
+    "available": true,
+    "image_url": "/images/coffees/100955894.png" 
+  },
+  {
+    "name": "Ethiopian Yirgacheffe",
+    "description": "Réputé pour son arôme floral, son acidité vive et ses notes de saveur citronnée.",
+    "origin": "Éthiopie",
+    "price": 22.50,
+    "main_feature": "Fruité",
+    "created_at": "2024-09-26",
+    "available": true,
+    "image_url": "/images/coffees/105589090.png"
+  },
+  {
+    "name": "Brazilian Santos",
+    "description": "Café doux et lisse avec un profil de saveur de noisette.",
+    "origin": "Brésil",
+    "price": 17.80,
+    "main_feature": "Doux",
+    "created_at": "2024-09-26",
+    "available": true,
+    "image_url": "/images/coffees/134009550.png" 
+  },
+
+{
+  "name": "Guatemalan Antigua",
+  "description": "Café corsé avec des nuances chocolatées et une pointe d'épice.",
+  "origin": "Guatemala",
+  "price": 21.25,
+  "main_feature": "Corsé",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/256505890.png"
+},
+{
+  "name": "Kenyan AA",
+  "description": "Café complexe connu pour son acidité rappelant le vin et ses saveurs fruitées.",
+  "origin": "Kenya",
+  "price": 23.70,
+  "main_feature": "Acide",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/295432730.png"
+},
+{
+  "name": "Sumatra Mandheling",
+  "description": "Café profond et terreux avec un corps lourd et une faible acidité.",
+  "origin": "Indonésie",
+  "price": 19.95,
+  "main_feature": "Corsé",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/302932754.png"
+},
+
+{
+  "name": "Costa Rican Tarrazu",
+  "description": "Café vif et net avec une finition propre et une acidité vive.",
+  "origin": "Costa Rica",
+  "price": 24.50,
+  "main_feature": "Acide",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/327302954.png"
+},
+{
+  "name": "Vietnamese Robusta",
+  "description": "Café audacieux et fort avec une saveur robuste distinctive.",
+  "origin": "Vietnam",
+  "price": 16.75,
+  "main_feature": "Épicé",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/549549090.png"
+},
+
+{
+  "name": "Tanzanian Peaberry",
+  "description": "Acidité vive avec un profil de saveur rappelant le vin et un corps moyen.",
+  "origin": "Tanzanie",
+  "price": 26.80,
+  "main_feature": "Fruité",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/582954954.png"
+},
+
+{
+  "name": "Jamaican Blue Mountain",
+  "description": "Reconnu pour sa saveur douce, son acidité vive et son absence d'amertume.",
+  "origin": "Jamaïque",
+  "price": 39.25,
+  "main_feature": "Doux",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/589100954.png"
+},
+{
+  "name": "Rwandan Bourbon",
+  "description": "Café avec des notes florales prononcées, une acidité vive et un corps moyen.",
+  "origin": "Rwanda",
+  "price": 21.90,
+  "main_feature": "Fruité",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/650753915.png"
+},
+
+{
+  "name": "Panamanian Geisha",
+  "description": "Café rare aux arômes floraux complexes, une acidité brillante et un profil de saveur distinctif.",
+  "origin": "Panama",
+  "price": 42.00,
+  "main_feature": "Fruité",
+  "created_at": "2023-09-26",
+  "available": true,
+  "image_url": "/images/coffees/795501340.png"
+},
+
+{
+  "name": "Peruvian Arabica",
+  "description": "Café équilibré avec des notes de chocolat, une acidité modérée et un corps velouté.",
+  "origin": "Pérou",
+  "price": 19.40,
+  "main_feature": "Chocolaté",
+  "created_at": "2023-09-26",
+  "available": false,
+  "image_url": "/images/coffees/954589100.png"
+},
+{
+  "name": "Hawaiian Kona",
+  "description": "Café rare au goût riche, une acidité douce et des nuances subtiles.",
+  "origin": "Hawaï",
+  "price": 55.75,
+  "main_feature": "Doux",
+  "created_at": "2023-09-26",
+  "available": false,
+  "image_url": "/images/coffees/958090105.png"
+},
+{
+  "name": "Nicaraguan Maragogipe",
+  "description": "Café avec des notes de fruits, une acidité vive et un corps plein.",
+  "origin": "Nicaragua",
+  "price": 28.60,
+  "main_feature": "Fruité",
+  "created_at": "2023-09-26",
+  "available": false,
+  "image_url": "/images/coffees/691550753.png"
+}
+  
+]

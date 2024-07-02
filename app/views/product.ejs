@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+
+    <%- include('partials/head') %> 
+
+    <link rel="stylesheet" href="/css/product.css" />
+
+  </head>
+
+  <body>
+
+<%- include('partials/header') %> 
+
+<main>
+
+
+  <section id="article">
+    <h1 style="background-image: url('/images/coffees/<%= Number(product.reference) %>.png')">
+      <%= product.name %>
+    </h1>
+
+    <p><%= product.description %></p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Origine</th>
+          <td><%= product.origin %></td>
+        </tr>
+        <tr>
+          <th>Caractéristique principale</th>
+          <td><%= product.category_id %></td>
+        </tr>
+        <tr>
+          <th>Prix au kg</th>
+          <td><%= product.price %>€</td>
+        </tr>
+        <tr>
+          <th>Disponible actuellement</th>
+          <td><%= product.available %></td>
+        </tr>
+        <tr>
+          <th>Référence SKU du produit</th>
+          <td><%= product.reference %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="/catalog" class="button">Retour au catalogue</a>
+
+  </section>
+
+</main>
+
+</body>
+</html>
+
+<%-include('partials/footer') %>
+</body>
+</html>
