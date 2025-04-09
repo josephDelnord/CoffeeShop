@@ -1,11 +1,24 @@
-// Récupérer le module PG
-const pg = require("pg");
+import pg from 'pg';
+import dotenv from 'dotenv';
+dotenv.config();
 
-// Créer un client
-const client = new pg.Client(process.env.PG_URL);
+const { Client } = pg;
 
-// Connecter le client
-client.connect();
+const client = new Client({
+	connectionString: process.env.PG_URL, // Assurez-vous que cette variable est bien définie dans .env
+});
 
-// Exporter le client connecté
-module.exports = client;
+const connectDatabase = async () => {
+	try {
+		await client.connect();
+		console.log('Connected to the database');
+	} catch (err) {
+		console.error('Connection error:', err.message || err);
+	}
+};
+
+// Connexion à la base de données
+connectDatabase();
+
+// Exportation du client pour utilisation dans d'autres modules
+export { client };

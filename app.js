@@ -1,46 +1,46 @@
-// Récupération des variables d'environnement
-require("dotenv").config();
+import session from "express-session";
+import express from "express";
+import router from "./app/router.js";
+import dotenv from "dotenv";
+dotenv.config();
 
-// Récupération du module Express-session
-const session = require("express-session");
-
-// Récupération du module Express
-const express = require("express");
-
-// Importationrouter
-const router = require("./app/router");
+const { urlencoded } = express;
 
 // Initialisation d'Express
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;  // Utilisation d'un port par défaut si la variable d'environnement n'est pas définie
 
 // Configuration d'EJS
 app.set("views", "./app/views");
 app.set("view engine", "ejs");
 
-// Middlewares
+// Middleware pour les fichiers statiques
 app.use(express.static("static"));
 
-// analyser le corps de la requête
-app.use(express.urlencoded({ extended: true }));
+// Middleware pour analyser le corps de la requête
+app.use(urlencoded({ extended: true }));
 
 // Paramètres de session
 app.use(
   session({
-    secret: process.env.SECRET_SESSION,
+    secret: process.env.SECRET_SESSION || "default_secret",  // Ajout d'une valeur par défaut pour éviter les erreurs si la variable n'est pas définie
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: false,
-      maxAge: 1000 * 60 * 60,
+      secure: process.env.NODE_ENV === "production",  // Utilisation de "secure" uniquement en mode production
+      maxAge: 1000 * 60 * 60,  // 1 heure
     },
   })
 );
 
-// routage !
+// Routage
 app.use(router);
 
 // Démarrage du serveur
-app.listen(port, () => {
-  console.log(`Listening on http://localhost:${port}`);
+app.listen(port, (err) => {
+  if (err) {
+    console.error("Error starting the server:", err);
+    return;
+  }
+  console.log(`Server is running on http://localhost:${port}`);
 });

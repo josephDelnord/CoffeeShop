@@ -1,25 +1,26 @@
-const express = require("express");
+// app/router.js
+import { Router } from "express";
+import mainController from "./controllers/mainController.js";
 
-// Importer nos controllers
-const mainController = require("./controllers/mainController");
+const router = Router();
 
-const router = express.Router();
-
-// page d'acceuil
+// Page d'accueil
 router.get("/", mainController.homePage);
 
-// page du catalogue
+// Page du catalogue
 router.get("/catalog", mainController.catalogPage);
 
-// page du produit
+// Page du produit
 router.get("/product/:id", mainController.productPage);
 
-// page d'a propos
+// Page à propos
 router.get("/about", mainController.aboutPage);
 
-router.use((request, response) => {
-  response.status(404).render("404");
+// Page 404 pour les routes non définies
+router.use((req, res) => {
+  console.error(`Page non trouvée: ${req.originalUrl}`);  // Log l'URL de la page non trouvée
+  res.status(404).render("404");  // Gérer les pages non trouvées avec un template "404"
 });
 
 // Exporter le router
-module.exports = router;
+export default router;
